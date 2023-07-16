@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Weather app</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+  <body class="body">
+
+    <nav class="navbar navbar-expand-md navbar-dark  fixed-top" style="background-color: rgb(19, 19, 19);">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">WEATHER APP</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#cityName">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#top">Top Cities</a>
+          </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link disabled">Disabled</a>
+          </li> -->
+        </ul>
+        <form class="d-flex" role="search">
+          <input id="city" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-light" type="submit" id="search">Search</button>
+        </form>
+      </div>
+    </div>
+    </nav>
+
+
+
+    <br>
+    <br>
+    <br>
+
+
+
+    <h1 class="text-center hedi">Weather of <span id="cityName"></span></h1>
+    <div class="container">
+    <div class="row row-cols-1 row-cols-md-2 g-4">
+      <div class="col car card1">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title text-center head">Temperature</h5>
+            <hr>
+            <div class="tab">
+              <table class="w_list" >
+                <tr>
+                    <td colspan="2"><h1 class="text-center cel"><span id="temp"></span>&#8451;</h1></td>
+                </tr>
+                <tr>
+                  <td colspan="2"><hr></td>
+                </tr>
+                <tr>
+                  <th>Min Temperature :</th>
+                  <td ><span id="min_temp"></span></td>
+                </tr>
+                <tr>
+                  <th>Max Temperature :</th>
+                  <td><span id="max_temp"></span></td>
+                </tr>
+                <tr>
+                  <th>Humidity :</th>
+                  <td><span id="humidity"></span></td>
+                </tr>
+                <tr>
+                  <th>Wind Speed :</th>
+                  <td><span id="wind_speed"></span></td>
+                </tr>
+                <tr>
+                  <th>Sunrise :</th>
+                  <td><span id="sunrise"></span></td>
+                </tr>
+                <tr>
+                  <th>Sunset :</th>
+                  <td><span id="sunset"></span></td>
+                </tr>
+              </table>              
+            </div>
+          </div> 
+        </div>
+      </div>
+      <div class="col car ">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title text-center head">AQI</h5>
+            <hr>
+            <div class="tab">
+              <table class="a_list" >
+                <tr>
+                    <td colspan="3"><h1 class="text-center cel"><span id="oqi"></span></h1></td>
+                </tr>
+                <tr>
+                  <td colspan="3"><hr></td>
+                </tr>
+                <tr>
+                  <td style="width: 40%;"></td>
+                  <th>Concentration</th>
+                  <th>AQI</th>
+                </tr>
+                
+                <tr>
+                  <th>CO</th>
+                  <td><span id="cco"></span></td>
+                  <td><span id="cca"></span></td>
+                </tr>
+                <tr>
+                  <th>NO2</th>
+                  <td><span id="nco"></span></td>
+                  <td><span id="nca"></span></td>
+                </tr>
+                <tr>
+                  <th>O3</th>
+                  <td><span id="oco"></span></td>
+                  <td><span id="oca"></span></td>
+                </tr>
+                <tr>
+                  <th>SO2</th>
+                  <td><span id="sco"></span></td>
+                  <td><span id="sca"></span></td>
+                </tr>
+                <tr>
+                  <th>PM10</th>
+                  <td><span id="pco"></span></td>
+                  <td><span id="pca"></span></td>
+                </tr>
+              </table>              
+            </div>
+
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    </div>
+
+
+
+    <div class="top_search">
+
+    <center><h1 class="hedi">TOP CITIES</h1></center>
+    <br>
+    <br>
+    <div  id="top" class="table-responsive small">
+      <table class="table  " style="background-color: #EDF5E1;">
+        <thead style="text-align: center;">
+          <tr>
+            <th scope="col">Cities</th>
+            <th scope="col">AQI</th>
+            <th scope="col">Temperature</th>
+            <th scope="col">Min_temp</th>
+            <th scope="col">Max_temp</th>
+            <th scope="col">Humidity</th>
+            <th scope="col">Wind_speed</th>
+          </tr>
+        </thead>
+        <tbody style="text-align: center;">
+          
+          <tr>
+            <th>Delhi</th>
+            <td><span id="da"></span></td>
+            <td><span id="dt"></span></td>
+            <td><span id="dmi"></span></td>
+            <td><span id="dma"></span></td>
+            <td><span id="dh"></span></td>
+            <td><span id="dw"></span></td>
+          </tr>
+          <tr>
+            <th>Ghaziabad</th>
+            <td><span id="ga"></span></td>
+            <td><span id="gt"></span></td>
+            <td><span id="gmi"></span></td>
+            <td><span id="gma"></span></td>
+            <td><span id="gh"></span></td>
+            <td><span id="gw"></span></td>
+          </tr>
+          <tr>
+            <th>Lucknow</th>
+            <td><span id="la"></span></td>
+            <td><span id="lt"></span></td>
+            <td><span id="lmi"></span></td>
+            <td><span id="lma"></span></td>
+            <td><span id="lh"></span></td>
+            <td><span id="lw"></span></td>
+          </tr>
+          <tr>
+            <th>Bihar</th>
+            <td><span id="ba"></span></td>
+            <td><span id="bt"></span></td>
+            <td><span id="bmi"></span></td>
+            <td><span id="bma"></span></td>
+            <td><span id="bh"></span></td>
+            <td><span id="bw"></span></td>
+          </tr>
+          <tr>
+            <th>Noida</th>
+            <td><span id="na"></span></td>
+            <td><span id="nt"></span></td>
+            <td><span id="nmi"></span></td>
+            <td><span id="nma"></span></td>
+            <td><span id="nh"></span></td>
+            <td><span id="nw"></span></td>
+          </tr>
+          
+          
+          <tr>
+            <th>Manali</th>
+            <td><span id="ma"></span></td>
+            <td><span id="mt"></span></td>
+            <td><span id="mmi"></span></td>
+            <td><span id="mma"></span></td>
+            <td><span id="mh"></span></td>
+            <td><span id="mw"></span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
+    <script src="ssc.js" ></script>
+
+
+
+  </body>
+</html>

@@ -1,0 +1,61 @@
+
+.body{
+    /* background-color:rgb(59, 59, 59); */
+    background-image: url('images/pexels-daniel-absi-952670.jpg');
+    background-size: 100%;
+}
+
+.hedi{
+    padding-top: 4%;
+    color: aliceblue;
+}
+
+ .car{
+    margin-top: 4%;
+    padding: 10px;
+    width: 48%;
+    height: 60vh;
+}
+
+.card1{
+    margin-left: 3%;
+}
+
+.tab{
+    padding-top: 1em;
+}
+
+.top_search{
+    padding: 10%;
+}
+
+.head{
+    font-size:2em;
+}
+
+.cel{
+    font-size: 2em;
+    /* font-family: 'Times New Roman', Times, serif; */
+}
+
+.w_list{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+
+}
+
+.w_list>tr{
+    margin: 10px;
+}
+
+.a_list{
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+
+}
+
+
